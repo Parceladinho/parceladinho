@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://parceladinho.app/sitemap.xml
+Sitemap: https://labresfranciosi.github.io/parceladinho/sitemap.xml
