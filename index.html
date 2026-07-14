@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>App para Controlar Parcelas do Cartão | Parceladinho</title>
+  <meta name="description" content="Tire uma foto da fatura e veja todas as suas compras parceladas: quantas parcelas faltam, quanto ainda deve e quando acaba. Teste 3 dias grátis no iPhone.">
+  <link rel="canonical" href="https://parceladinho.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Parceladinho — App para Controlar Parcelas do Cartão">
+  <meta property="og:description" content="Tire uma foto da fatura e a IA organiza todas as suas compras parceladas: quantas parcelas faltam, quanto ainda deve e quando acaba. Teste 3 dias grátis.">
+  <meta property="og:url" content="https://parceladinho.app/">
+  <meta property="og:image" content="https://parceladinho.app/assets/app-icon-1024.png">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Parceladinho">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="apple-itunes-app" content="app-id=6760917181">
+  <link rel="icon" type="image/png" sizes="180x180" href="assets/app-icon-180.png">
+  <link rel="apple-touch-icon" href="assets/app-icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MobileApplication",
+        "@id": "https://parceladinho.app/#app",
+        "name": "Parceladinho: Parcelas Cartão",
+        "operatingSystem": "iOS",
+        "applicationCategory": "FinanceApplication",
+        "description": "App para controlar parcelas do cartão de crédito: tire uma foto da fatura e a IA extrai todas as compras parceladas — quantas parcelas faltam, quanto ainda deve e quando acaba.",
+        "inLanguage": "pt-BR",
+        "image": "https://parceladinho.app/assets/app-icon-1024.png",
+        "installUrl": "https://apps.apple.com/br/app/parceladinho-parcelas-cart%C3%A3o/id6760917181",
+        "author": { "@type": "Person", "name": "Roberto Franciosi" },
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5.0", "ratingCount": "8" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "BRL",
+          "description": "Grátis para baixar. Todos os recursos com a assinatura Parceladinho Pro, com 3 dias de teste grátis."
+        },
+        "screenshot": [
+          "https://parceladinho.app/assets/screenshot-01-dashboard.png",
+          "https://parceladinho.app/assets/screenshot-02-fatura.png",
+          "https://parceladinho.app/assets/screenshot-03-insights.png"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://parceladinho.app/#website",
+        "url": "https://parceladinho.app/",
+        "name": "Parceladinho",
+        "inLanguage": "pt-BR",
+        "publisher": { "@type": "Person", "name": "Roberto Franciosi" }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://parceladinho.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Como saber quantas parcelas faltam no cartão de crédito?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A fatura mostra apenas a parcela do mês (ex: 4/10), então é preciso subtrair a parcela atual do total de cada compra. No Parceladinho, basta tirar uma foto da fatura: a IA identifica cada compra parcelada e mostra quantas parcelas faltam e quanto ainda falta pagar, com barra de progresso por compra." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como ver todas as minhas compras parceladas no cartão?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No app do banco, procure a fatura detalhada e localize as compras marcadas com a numeração da parcela (ex: 3/12) — mas cada banco só mostra o próprio cartão. Para ver todas de uma vez, fotografe ou envie o PDF da fatura no Parceladinho e a IA extrai loja, valor e parcelas restantes de cada compra." }
+          },
+          {
+            "@type": "Question",
+            "name": "Existe app para controlar parcelas de vários cartões juntos?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sim. O Parceladinho consolida as parcelas de todos os seus cartões — Nubank, Inter, C6, Itaú e outros — em um único painel. Você importa cada fatura por foto ou PDF e vê o total comprometido, quanto vai pagar no próximo mês e as parcelas organizadas por cartão." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como fazer controle de parcelas no Excel?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Crie colunas para loja, valor da parcela, parcela atual, total de parcelas e mês de término, e some o valor restante com uma fórmula simples. Nosso guia traz um modelo grátis pronto para copiar — e a alternativa automática: fotografar a fatura e deixar a IA do Parceladinho preencher tudo sozinha." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como funciona a leitura da fatura por foto ou PDF?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Você tira uma foto da fatura impressa ou envia o PDF baixado no app do banco. A IA do Parceladinho identifica cada compra parcelada — loja, valor, parcela atual e total — e monta seu dashboard em segundos, sem digitar nada." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como saber quanto ainda devo no cartão de crédito?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Some as parcelas futuras de cada compra parcelada — valor da parcela multiplicado pelas parcelas restantes. O Parceladinho faz esse cálculo automaticamente a partir da foto da fatura e mostra o total comprometido em parcelas abertas na primeira tela." }
+          },
+          {
+            "@type": "Question",
+            "name": "Como ver parcelas futuras no cartão de crédito?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Os apps dos bancos mostram as parcelas futuras fatura a fatura, uma de cada vez. Para ver todas juntas, o Parceladinho monta uma projeção mês a mês a partir da foto da fatura: quanto você vai pagar em cada mês e em que mês cada parcela acaba." }
+          },
+          {
+            "@type": "Question",
+            "name": "O Parceladinho precisa conectar na minha conta do banco?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Não. O Parceladinho não usa Open Finance nem pede senha do banco: você só fotografa ou envia o PDF da fatura. Todos os dados ficam armazenados apenas no seu iPhone." }
+          },
+          {
+            "@type": "Question",
+            "name": "O Parceladinho funciona com Nubank, Inter e C6?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Sim. O app lê faturas de qualquer cartão brasileiro — Nubank, Inter, C6, Itaú, Bradesco, Santander e outros — por foto ou PDF, e organiza as parcelas separadas por cartão no mesmo painel." }
+          },
+          {
+            "@type": "Question",
+            "name": "Parcelei demais no cartão, por onde eu começo?",
+            "acceptedAnswer": { "@type": "Answer", "text": "O primeiro passo de qualquer plano é enxergar tudo o que você deve. Fotografe suas faturas no Parceladinho para mapear todas as parcelas em minutos, veja quanto do seu orçamento está comprometido e acompanhe mês a mês até zerar." }
+          },
+          {
+            "@type": "Question",
+            "name": "Quanto custa o Parceladinho?",
+            "acceptedAnswer": { "@type": "Answer", "text": "O Parceladinho é grátis para baixar e todos os recursos são desbloqueados pela assinatura Parceladinho Pro, com 3 dias de teste grátis. Os planos e valores atuais aparecem direto no app, e você pode cancelar a qualquer momento pela App Store." }
+          },
+          {
+            "@type": "Question",
+            "name": "Qual o melhor app para controlar parcelas do cartão?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Apps de finanças gerais controlam gastos, mas não mostram parcelas restantes por compra; planilhas exigem digitação manual. O Parceladinho é dedicado a parcelas: lê a fatura por foto ou PDF com IA e mostra quantas parcelas faltam, quanto ainda deve e quando cada uma acaba." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <img src="assets/app-icon-180.png" alt="Ícone do app Parceladinho" width="34" height="34">
+        Parceladinho
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#guias">Guias</a>
+        <a href="#faq">FAQ</a>
+        <a class="nav-cta" href="https://apps.apple.com/br/app/parceladinho-parcelas-cart%C3%A3o/id6760917181">Baixar grátis</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================ HERO -->
+    <section class="hero" id="download">
+      <div class="container">
+        <div>
+          <h1>O <em>app para controlar as parcelas</em> do cartão de crédito</h1>
+          <p class="sub">O Parceladinho é o app para controlar parcelas que faltava: tire uma <strong>foto da fatura</strong> (ou envie o PDF) e a IA extrai todas as suas compras parceladas — quantas parcelas faltam, quanto você ainda deve e quanto vai pagar no próximo mês. Um app para organizar parcelas de todos os seus cartões, direto no iPhone e sem conectar ao banco.</p>
+          <div class="hero-badges">
+            <a class="store-badge" href="https://apps.apple.com/br/app/parceladinho-parcelas-cart%C3%A3o/id6760917181" aria-label="Baixar o Parceladinho na App Store">
+              <img src="assets/app-store-badge.svg" alt="Baixar na App Store" width="162" height="54">
+            </a>
+            <div class="rating">
+              <span class="stars" aria-hidden="true">★★★★★</span>
+              <span>5,0 na App Store brasileira</span>
+            </div>
+          </div>
+          <ul class="trust-chips">
+            <li>📸 A IA lê sua fatura</li>
+            <li>🔒 Sem conectar ao banco</li>
+            <li>📱 Dados só no seu iPhone</li>
+            <li>🎁 3 dias de teste grátis</li>
+          </ul>
+        </div>
+        <div class="hero-shot">
+          <div class="phone">
+            <img src="assets/screenshot-01-dashboard.webp" alt="Dashboard do app parcelas cartão Parceladinho mostrando o total comprometido em parcelas abertas e quanto pagar no próximo mês" width="600" height="1300" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================== COMO FUNCIONA -->
+    <section id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Como funciona</span>
+          <h2>O aplicativo que lê a fatura do cartão por você</h2>
+          <p>Nada de digitar compra por compra. O controle de fatura do cartão de crédito acontece em três passos — a inteligência artificial faz o trabalho pesado.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <span class="num" aria-hidden="true">1</span>
+            <h3>Envie a fatura</h3>
+            <p>Tire uma foto da fatura impressa, escolha uma imagem da galeria ou envie o PDF baixado no app do banco. Funciona com Nubank, Inter, C6, Itaú e qualquer cartão brasileiro.</p>
+          </div>
+          <div class="step">
+            <span class="num" aria-hidden="true">2</span>
+            <h3>A IA identifica as parcelas</h3>
+            <p>Em segundos, a inteligência artificial encontra cada compra parcelada: loja, valor da parcela, parcela atual e total (aquele 3/12 da fatura).</p>
+          </div>
+          <div class="step">
+            <span class="num" aria-hidden="true">3</span>
+            <h3>Veja tudo no dashboard</h3>
+            <p>Total comprometido, quanto vem no próximo mês, quantas parcelas faltam de cada compra e quando você se livra de cada uma.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= RECURSOS -->
+    <section class="alt" id="recursos">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Recursos</span>
+          <h2>Controle de parcelas completo, sem digitar nada</h2>
+          <p>Feito para quem parcela no cartão de crédito e quer enxergar o todo: o que está aberto, o que já foi pago e o que ainda vem pela frente.</p>
+        </div>
+        <div class="features">
+          <div class="feature">
+            <span class="ico" aria-hidden="true">📊</span>
+            <h3>Dashboard inteligente</h3>
+            <p>Total comprometido em parcelas abertas e quanto você vai pagar no próximo mês — os dois números que importam, na primeira tela.</p>
+          </div>
+          <div class="feature">
+            <span class="ico" aria-hidden="true">✅</span>
+            <h3>Controle de parcelas pagas</h3>
+            <p>Barra de progresso visual para cada compra: quantas parcelas você já pagou, quantas faltam e alerta quando uma compra está quase quitada.</p>
+          </div>
+          <div class="feature">
+            <span class="ico" aria-hidden="true">📈</span>
+            <h3>Projeção mês a mês</h3>
+            <p>Veja as parcelas futuras do cartão em um gráfico de projeção mensal. Toque em qualquer mês para ver o que vence nele — e descubra quando você fica livre.</p>
+          </div>
+          <div class="feature">
+            <span class="ico" aria-hidden="true">🗂️</span>
+            <h3>Organize do seu jeito</h3>
+            <p>Um app para organizar parcelas de verdade: filtre por cartão, status ou loja, edite valores e datas, adicione compras manualmente e remova com um gesto.</p>
+          </div>
+          <div class="feature">
+            <span class="ico" aria-hidden="true">🧾</span>
+            <h3>Controle de fatura do cartão de crédito</h3>
+            <p>Importe a fatura por foto, imagem ou PDF. A cada mês, envie a nova fatura e o app atualiza o andamento de todas as compras parceladas.</p>
+          </div>
+          <div class="feature">
+            <span class="ico" aria-hidden="true">🔔</span>
+            <h3>Lembretes automáticos</h3>
+            <p>Configure um lembrete mensal para nunca esquecer de enviar a fatura e manter o controle das parcelas sempre em dia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================ MULTI-CARTÃO + PRIVACIDADE -->
+    <section>
+      <div class="container split">
+        <div class="feature" id="multi-cartao">
+          <span class="ico" aria-hidden="true">💳</span>
+          <h2>Controle as parcelas de vários cartões em um só lugar</h2>
+          <p>O app do Nubank só mostra o Nubank. O do Inter, só o Inter. O Parceladinho junta as compras parceladas de todos os seus cartões num painel único, separadas por cartão — e soma o impacto total no seu orçamento.</p>
+          <ul>
+            <li>Nubank, Inter, C6, Itaú, Bradesco, Santander e outros</li>
+            <li>Total por cartão e valor mensal de cada um</li>
+            <li>Distribuição dos gastos por loja e por cartão</li>
+          </ul>
+        </div>
+        <div class="feature" id="privacidade">
+          <span class="ico" aria-hidden="true">🔒</span>
+          <h2>Controle financeiro sem conectar ao banco</h2>
+          <p>Nada de Open Finance, senha do banco ou sincronização na nuvem. Você envia a fatura, a IA organiza e pronto: seus dados financeiros ficam armazenados apenas no seu iPhone.</p>
+          <ul>
+            <li>Nenhuma conexão com sua conta bancária</li>
+            <li>Nenhum dado compartilhado com terceiros</li>
+            <li>Privacidade em primeiro lugar, sempre</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================== SCREENSHOTS -->
+    <section class="alt" id="screenshots">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Screenshots</span>
+          <h2>Veja o Parceladinho por dentro</h2>
+          <p>O visual de quem finalmente sabe quanto deve, para quem e até quando.</p>
+        </div>
+        <div class="gallery">
+          <figure>
+            <div class="phone"><img src="assets/screenshot-01-dashboard.webp" alt="Dashboard do app de controle de parcelas com total comprometido e parcelas por cartão" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Chega de se perder nas parcelas</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="assets/screenshot-02-fatura.webp" alt="Envio da fatura do cartão por foto, PDF ou galeria para a IA identificar as parcelas" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Envie a fatura, a IA faz o resto</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="assets/screenshot-03-insights.webp" alt="Projeção mensal das parcelas futuras do cartão de crédito com destaques automáticos" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Saiba quanto vai pagar cada mês</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="assets/screenshot-04-parcelas.webp" alt="Lista de compras parceladas no cartão de crédito com filtros por cartão, loja e valor" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Todas as parcelas em um só lugar</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="assets/screenshot-05-liberdade.webp" alt="Contagem regressiva mostrando quando você se livra das parcelas do cartão" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Descubra quando você se livra</figcaption>
+          </figure>
+          <figure>
+            <div class="phone"><img src="assets/screenshot-06-distribuicao.webp" alt="Distribuição dos gastos parcelados por loja e por cartão" width="600" height="1300" loading="lazy"></div>
+            <figcaption>Entenda para onde vai seu dinheiro</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ GUIAS -->
+    <section id="guias">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">Guias</span>
+          <h2>Guias para dominar as parcelas do cartão</h2>
+          <p>Respostas diretas para as dúvidas mais comuns sobre compras parceladas — do jeito manual ao automático.</p>
+        </div>
+        <div class="guides">
+          <a class="guide-card" href="guias/como-ver-compras-parceladas-no-cartao.html">
+            <h3>Como ver compras parceladas no cartão de crédito</h3>
+            <p>Onde encontrar suas compras parceladas na fatura, quantas parcelas faltam e quanto ainda falta pagar — banco a banco.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/como-ver-compras-parceladas-nubank.html">
+            <h3>Como ver compras parceladas no Nubank</h3>
+            <p>Passo a passo no app do Nubank: parcelas restantes, fatura em PDF e como juntar com os outros cartões.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/como-ver-compras-parceladas-itau.html">
+            <h3>Como ver compras parceladas no Itaú</h3>
+            <p>Onde ficam as compras parceladas no app do Itaú e como saber quantas parcelas faltam em cada uma.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/como-ver-compras-parceladas-inter.html">
+            <h3>Como ver compras parceladas no Inter</h3>
+            <p>Como encontrar as parcelas no app do Banco Inter, baixar a fatura em PDF e consolidar tudo.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/planilha-de-controle-de-parcelas.html">
+            <h3>Planilha de controle de parcelas do cartão</h3>
+            <p>Modelo grátis para Excel e Google Sheets, versão para imprimir — e a planilha que se preenche sozinha.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/melhor-app-para-controlar-parcelas.html">
+            <h3>Melhor app para controlar parcelas em 2026</h3>
+            <p>Apps de finanças, planilhas e apps do banco comparados: o que cada um resolve e onde ficam devendo.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/fatura-c6-bank-pdf-senha.html">
+            <h3>Fatura do C6 Bank em PDF: qual é a senha e como baixar</h3>
+            <p>A senha do PDF da fatura do C6 Bank, o passo a passo para baixar o arquivo e o que fazer com ele.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+          <a class="guide-card" href="guias/parcelei-demais-como-sair-das-parcelas.html">
+            <h3>Parcelei demais, e agora?</h3>
+            <p>Plano prático em 5 passos para retomar o controle quando as parcelas comprometeram o salário.</p>
+            <span class="more">Ler guia →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================== FAQ -->
+    <section class="alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <span class="kicker">FAQ</span>
+          <h2>Perguntas frequentes</h2>
+          <p>Tudo o que você precisa saber sobre o Parceladinho e o controle de parcelas do cartão.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Como saber quantas parcelas faltam no cartão de crédito?</summary>
+            <div class="faq-body">
+              <p>A fatura mostra apenas a parcela do mês (ex: 4/10), então é preciso subtrair a parcela atual do total de cada compra. No Parceladinho, basta tirar uma foto da fatura: a IA identifica cada compra parcelada e mostra quantas parcelas faltam e quanto ainda falta pagar, com barra de progresso por compra. <a href="guias/como-ver-compras-parceladas-no-cartao.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Como ver todas as minhas compras parceladas no cartão?</summary>
+            <div class="faq-body">
+              <p>No app do banco, procure a fatura detalhada e localize as compras marcadas com a numeração da parcela (ex: 3/12) — mas cada banco só mostra o próprio cartão. Para ver todas de uma vez, fotografe ou envie o PDF da fatura no Parceladinho e a IA extrai loja, valor e parcelas restantes de cada compra. <a href="guias/como-ver-compras-parceladas-no-cartao.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Existe app para controlar parcelas de vários cartões juntos?</summary>
+            <div class="faq-body">
+              <p>Sim. O Parceladinho consolida as parcelas de todos os seus cartões — Nubank, Inter, C6, Itaú e outros — em um único painel. Você importa cada fatura por foto ou PDF e vê o total comprometido, quanto vai pagar no próximo mês e as parcelas organizadas por cartão. <a href="#multi-cartao">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Como fazer controle de parcelas no Excel?</summary>
+            <div class="faq-body">
+              <p>Crie colunas para loja, valor da parcela, parcela atual, total de parcelas e mês de término, e some o valor restante com uma fórmula simples. Nosso guia traz um modelo grátis pronto para copiar — e a alternativa automática: fotografar a fatura e deixar a IA do Parceladinho preencher tudo sozinha. <a href="guias/planilha-de-controle-de-parcelas.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Como funciona a leitura da fatura por foto ou PDF?</summary>
+            <div class="faq-body">
+              <p>Você tira uma foto da fatura impressa ou envia o PDF baixado no app do banco. A IA do Parceladinho identifica cada compra parcelada — loja, valor, parcela atual e total — e monta seu dashboard em segundos, sem digitar nada. <a href="#como-funciona">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Como saber quanto ainda devo no cartão de crédito?</summary>
+            <div class="faq-body">
+              <p>Some as parcelas futuras de cada compra parcelada — valor da parcela multiplicado pelas parcelas restantes. O Parceladinho faz esse cálculo automaticamente a partir da foto da fatura e mostra o total comprometido em parcelas abertas na primeira tela. <a href="guias/como-ver-compras-parceladas-no-cartao.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Como ver parcelas futuras no cartão de crédito?</summary>
+            <div class="faq-body">
+              <p>Os apps dos bancos mostram as parcelas futuras fatura a fatura, uma de cada vez. Para ver todas juntas, o Parceladinho monta uma projeção mês a mês a partir da foto da fatura: quanto você vai pagar em cada mês e em que mês cada parcela acaba. <a href="guias/como-ver-compras-parceladas-no-cartao.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>O Parceladinho precisa conectar na minha conta do banco?</summary>
+            <div class="faq-body">
+              <p>Não. O Parceladinho não usa Open Finance nem pede senha do banco: você só fotografa ou envia o PDF da fatura. Todos os dados ficam armazenados apenas no seu iPhone. <a href="#privacidade">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>O Parceladinho funciona com Nubank, Inter e C6?</summary>
+            <div class="faq-body">
+              <p>Sim. O app lê faturas de qualquer cartão brasileiro — Nubank, Inter, C6, Itaú, Bradesco, Santander e outros — por foto ou PDF, e organiza as parcelas separadas por cartão no mesmo painel. <a href="guias/como-ver-compras-parceladas-nubank.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Parcelei demais no cartão, por onde eu começo?</summary>
+            <div class="faq-body">
+              <p>O primeiro passo de qualquer plano é enxergar tudo o que você deve. Fotografe suas faturas no Parceladinho para mapear todas as parcelas em minutos, veja quanto do seu orçamento está comprometido e acompanhe mês a mês até zerar. <a href="guias/parcelei-demais-como-sair-das-parcelas.html">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Quanto custa o Parceladinho?</summary>
+            <div class="faq-body">
+              <p>O Parceladinho é grátis para baixar e todos os recursos são desbloqueados pela assinatura Parceladinho Pro, com 3 dias de teste grátis. Os planos e valores atuais aparecem direto no app, e você pode cancelar a qualquer momento pela App Store. <a href="#download">Saiba mais</a></p>
+            </div>
+          </details>
+          <details>
+            <summary>Qual o melhor app para controlar parcelas do cartão?</summary>
+            <div class="faq-body">
+              <p>Apps de finanças gerais controlam gastos, mas não mostram parcelas restantes por compra; planilhas exigem digitação manual. O Parceladinho é dedicado a parcelas: lê a fatura por foto ou PDF com IA e mostra quantas parcelas faltam, quanto ainda deve e quando cada uma acaba. <a href="guias/melhor-app-para-controlar-parcelas.html">Saiba mais</a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================= DOWNLOAD -->
+    <section>
+      <div class="container">
+        <div class="cta-band">
+          <h2>Descubra hoje quanto você ainda deve em parcelas</h2>
+          <p>Baixe o Parceladinho, tire uma foto da sua fatura e veja em segundos quantas parcelas faltam, quanto vem no próximo mês e quando você se livra de tudo.</p>
+          <a class="store-badge" href="https://apps.apple.com/br/app/parceladinho-parcelas-cart%C3%A3o/id6760917181" aria-label="Baixar o Parceladinho na App Store">
+            <img src="assets/app-store-badge.svg" alt="Baixar na App Store" width="168" height="56">
+          </a>
+          <p class="fine">Grátis para baixar · 3 dias de teste grátis · cancele quando quiser</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================ FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <a class="brand" href="index.html">
+            <img src="assets/app-icon-180.png" alt="Ícone do Parceladinho" width="34" height="34">
+            Parceladinho
+          </a>
+          <p>O app brasileiro que usa inteligência artificial para organizar as parcelas do seu cartão de crédito. Foto da fatura, controle total — sem conectar ao banco.</p>
+        </div>
+        <div>
+          <h4>Produto</h4>
+          <ul>
+            <li><a href="#como-funciona">Como funciona</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#screenshots">Screenshots</a></li>
+            <li><a href="#faq">Perguntas frequentes</a></li>
+            <li><a href="https://apps.apple.com/br/app/parceladinho-parcelas-cart%C3%A3o/id6760917181">Baixar na App Store</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Guias</h4>
+          <ul>
+            <li><a href="guias/como-ver-compras-parceladas-no-cartao.html">Ver compras parceladas no cartão</a></li>
+            <li><a href="guias/como-ver-compras-parceladas-nubank.html">Compras parceladas no Nubank</a></li>
+            <li><a href="guias/planilha-de-controle-de-parcelas.html">Planilha de controle de parcelas</a></li>
+            <li><a href="guias/melhor-app-para-controlar-parcelas.html">Melhor app para controlar parcelas</a></li>
+            <li><a href="guias/parcelei-demais-como-sair-das-parcelas.html">Parcelei demais, e agora?</a></li>
+            <li><a href="#guias">Ver todos os guias</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Parceladinho · Roberto Franciosi</span>
+        <span>
+          <a href="https://parcelcontrol-jwrdzwzv.manus.space/api/privacy">Privacidade</a> ·
+          <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Termos</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
